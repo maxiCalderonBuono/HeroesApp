@@ -52,7 +52,7 @@ export const SearchPage = () => {
             </button>
           </form>
         </div>
-        <div >
+        <div className= "mt-3" >
           <h4>Results</h4>
           <hr />
           {(q === '') ? <div className= "alert alert-info">
