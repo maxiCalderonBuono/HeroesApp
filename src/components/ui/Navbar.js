@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 import "./Navbar.css";
+import 'animate.css'
 import { NavbarIcon } from "./NavbarIcon";
 
 export const Navbar = () => {
@@ -50,7 +51,7 @@ export const Navbar = () => {
         <div className="navbar-nav fs-5">
           <NavLink
             className={({ isActive }) =>
-              "nav-item nav-link text-center" + (isActive ? " active" : "")
+              "nav-item nav-link text-center " + (isActive ? " active" : "") + (click ? " animate__animated animate__fadeInLeft animate__fast" : "")
             }
             to="/marvel"
             onClick={() => (click) ? setClick(!click) : setClick(click) }
@@ -60,7 +61,7 @@ export const Navbar = () => {
 
           <NavLink
             className={({ isActive }) =>
-              "nav-item nav-link text-center" + (isActive ? " active" : "")
+              "nav-item nav-link text-center" + (isActive ? " active" : "") + (click ? " animate__animated animate__fadeInRight animate__fast" : "")
             }
             to="/dc"
             onClick={() => (click) ? setClick(!click) : setClick(click) }
@@ -70,7 +71,7 @@ export const Navbar = () => {
 
           <NavLink
             className={({ isActive }) =>
-              "nav-item nav-link text-center" + (isActive ? " active" : "")
+              "nav-item nav-link text-center" + (isActive ? " active" : "") + (click ? " animate__animated animate__fadeInLeft animate__fast" : "")
             }
             to="/search"
             onClick={() => (click) ? setClick(!click) : setClick(click) }
@@ -88,10 +89,10 @@ export const Navbar = () => {
         >
           <div className="navbar-nav fs-5">
             <ul className="navbar-nav ml-auto">
-              <span className="nav-item nav-link text-info text-center">
+              <span className={"nav-item nav-link text-info text-center" + (click ? " animate__animated animate__fadeInRight animate__fast" : "")}>
                 Maxi
               </span>
-              <button className="nav-item nav-link btn fs-5" onClick={handleLogout}>
+              <button className={"nav-item nav-link btn fs-5" + (click ? " animate__animated animate__fadeInLeft animate__fast" : "")} onClick={handleLogout}>
                 Logout
               </button>
             </ul>
