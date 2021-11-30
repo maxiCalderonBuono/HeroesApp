@@ -117,7 +117,7 @@ export const Navbar = () => {
                     ? " animate__animated animate__fadeInRight animate__fast"
                     : "")
                 }
-              >{"Hola! " + user.name}</span>
+              >{"Hola " + user.name + "!"}</span>
               <button
                 className={
                   "nav-item nav-link btn fs-5" +

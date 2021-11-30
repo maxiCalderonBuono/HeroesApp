@@ -33,6 +33,7 @@ export const Loginpage = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
+    handleClick();
   };
 
   return (
