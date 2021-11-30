@@ -38,7 +38,7 @@ export const Navbar = () => {
       </Link>
 
 
-      <div className="navbar-toggler navbar-toggler-right">
+      <div className="navbar-toggler navbar-toggler-right me-3">
         <NavbarIcon setClick={setClick} click={click} />
       </div>
 
