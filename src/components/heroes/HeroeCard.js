@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 import 'animate.css'
 import "./HeroeCard.css";
+// import batman from '../../assets/heroes/dc-batman.jpg' me permite solo contenido estático.
+
+const heroImage = require.context('../../assets/heroes', true)
 
 export const HeroeCard = ({
   id,
@@ -17,7 +20,9 @@ export const HeroeCard = ({
         <div className= "row g-0 ">
           <div className="col-4">
             <img
-              src={`/assets/heroes/${id}.jpg`}
+              //src={`/assets/heroes/${id}.jpg`} desde public/assets
+              //src= {batman} con import
+              src= {heroImage(`./${id}.jpg`).default}
               className="img-fluid rounded-start"
               alt={superhero}
             />

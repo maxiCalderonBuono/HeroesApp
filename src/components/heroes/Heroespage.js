@@ -3,6 +3,9 @@ import { useParams, Navigate, useNavigate } from "react-router-dom";
 import { getHeroeById } from "../../selectors/getHeroeById";
 
 export const Heroespage = () => {
+
+  const heroImage = require.context('../../assets/heroes', true)
+
   const { heroeId } = useParams();
 
   const hero = useMemo(() => getHeroeById(heroeId), [heroeId]);
@@ -20,7 +23,9 @@ export const Heroespage = () => {
   const { id, superhero, publisher, alter_ego, first_appearance, characters } =
     hero;
 
-  const imagePath = `/assets/heroes/${id}.jpg`;
+  const imagePath = heroImage(`./${id}.jpg`).default;
+
+  console.log(imagePath)
 
   return (
     <div className="row mt-5">
