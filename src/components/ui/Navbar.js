@@ -53,7 +53,7 @@ export const Navbar = () => {
               "nav-item nav-link text-center" + (isActive ? " active" : "")
             }
             to="/marvel"
-            onClick={() => setClick(!click)}
+            onClick={() => (click) ? setClick(!click) : setClick(click) }
           >
             Marvel
           </NavLink>
@@ -63,7 +63,7 @@ export const Navbar = () => {
               "nav-item nav-link text-center" + (isActive ? " active" : "")
             }
             to="/dc"
-            onClick={() => setClick(!click)}
+            onClick={() => (click) ? setClick(!click) : setClick(click) }
           >
             DC
           </NavLink>
@@ -73,7 +73,7 @@ export const Navbar = () => {
               "nav-item nav-link text-center" + (isActive ? " active" : "")
             }
             to="/search"
-            onClick={() => setClick(!click)}
+            onClick={() => (click) ? setClick(!click) : setClick(click) }
           >
             Search
           </NavLink>

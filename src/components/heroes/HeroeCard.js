@@ -13,8 +13,8 @@ export const HeroeCard = ({
 }) => {
   return (
     <div className="col animate__animated animate__pulse">
-      <div className="card mb-3" style={{ maxWidth: 540 }}>
-        <div className="row g-0">
+      <div className="card mb-3" >
+        <div className= "row g-0 ">
           <div className="col-4">
             <img
               src={`/assets/heroes/${id}.jpg`}
