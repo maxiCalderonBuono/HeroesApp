@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/heroes/HeroeCard.css","webpack://src/components/ui/Navbar.css"],"names":[],"mappings":"AAEA,UACI,YAAa,CACb,qBAEJ,CCNA,aACC,UACD","file":"main.2e04f43b.chunk.css","sourcesContent":["\r\n\r\n.col-md-8 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    \r\n}",".navbar-logo  {\n width: 6rem;\n}\n\n\n\n"]}

@@ -24,14 +24,14 @@ export const Heroespage = () => {
 
   return (
     <div className="row mt-5">
-      <div>
+      <div className= "col-md-5">
         <img
           src={imagePath}
           alt={superhero}
           className="img-thumbnail animate__animated animate__fadeInLeft"
         />
       </div>
-      <div className= "mt-3">
+      <div className= " col-md-7 mt-3">
         <h3>{superhero}</h3>
         <ul className="list-group list-group-flush">
           <li className="list-group-item">

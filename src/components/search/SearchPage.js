@@ -30,8 +30,8 @@ export const SearchPage = () => {
     <>
       <h1>Searches</h1>
       <hr />
-      <div className="col">
-        <div >
+      <div className="row">
+        <div className= "col-md-5 mb-3">
           <h4>Search</h4>
           <hr />
           <form onSubmit={handleSearch}>
@@ -52,7 +52,7 @@ export const SearchPage = () => {
             </button>
           </form>
         </div>
-        <div className= "mt-3" >
+        <div className= "col-md-7" >
           <h4>Results</h4>
           <hr />
           {(q === '') ? <div className= "alert alert-info">
