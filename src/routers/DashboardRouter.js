@@ -5,13 +5,15 @@ import { Heroespage } from "../components/heroes/Heroespage";
 import { Marvelpage } from "../components/marvel/Marvelpage";
 import { SearchPage } from "../components/search/SearchPage";
 import { Navbar } from "../components/ui/Navbar";
-import { IdleTimerContainer } from "../Idle/IdleTimerContainer"
+import { IdleTimerContainer } from "../Idle/IdleTimerContainer";
 
 export const DashboardRouter = () => {
   return (
     <>
       <IdleTimerContainer></IdleTimerContainer>
-      <Navbar />
+      <header>
+        <Navbar />
+      </header>
       <div className="container mt-2">
         <Routes>
           <Route path="/" element={<Marvelpage />} />
@@ -21,6 +23,7 @@ export const DashboardRouter = () => {
           <Route path="/search" element={<SearchPage />} />
         </Routes>
       </div>
+      
     </>
   );
 };

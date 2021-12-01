@@ -8,10 +8,10 @@ import "animate.css";
 import { NavbarIcon } from "./NavbarIcon";
 import { AuthContext } from "../../auth/authContext";
 import { types } from "../../types/types";
-import mainLogo from "../../assets/images/mainLogo.png"
+import mainLogo from "../../assets/images/mainLogo.png";
 
 export const Navbar = () => {
-  const {user, dispatch} = useContext(AuthContext);
+  const { user, dispatch } = useContext(AuthContext);
 
   const [click, setClick] = useState(false);
 
@@ -30,10 +30,9 @@ export const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    
     const action = {
       type: types.logout,
-    }
+    };
 
     dispatch(action);
 
@@ -45,7 +44,7 @@ export const Navbar = () => {
       <Link className="navbar-brand" to="/">
         <img
           className="navbar-logo d-inline-block align-top ms-3"
-          src= {mainLogo}
+          src={mainLogo}
           alt="webpage main logo"
         />
       </Link>
@@ -117,7 +116,9 @@ export const Navbar = () => {
                     ? " animate__animated animate__fadeInRight animate__fast"
                     : "")
                 }
-              >{"Hola " + user.name + "!"}</span>
+              >
+                {"Hola " + user.name + "!"}
+              </span>
               <button
                 className={
                   "nav-item nav-link btn fs-5" +
