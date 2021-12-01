@@ -16,42 +16,37 @@ export const HeroeCard = ({
 }) => {
   return (
     <div className="col animate__animated animate__pulse">
-    
-        <div className="card mb-3">
-          <div className="row g-0 ">
-            <div className="col-4">
-              <img
-                //src={`/assets/heroes/${id}.jpg`} desde public/assets
-                //src= {batman} con import
-                src={heroImage(`./${id}.jpg`).default}
-                className="img-fluid rounded-start"
-                alt={superhero}
-              />
+      <Link className="card mb-3 text-decoration-none text-dark" to={`/heroes/${id}`}>
+        <div className="row g-0 ">
+          <div className="col-4">
+            <img
+              //src={`/assets/heroes/${id}.jpg`} desde public/assets
+              //src= {batman} con import
+              src={heroImage(`./${id}.jpg`).default}
+              className="img-fluid rounded-start"
+              alt={superhero}
+            />
+          </div>
+          <div className="col-8">
+            <div className="card-body">
+              <h5 className="card-title">{superhero}</h5>
+              <p className="card-text">{alter_ego}</p>
+              {alter_ego !== characters && (
+                <p className="card-text">{characters}</p>
+              )}
+              <p className="card-text">
+                <small className="text-muted">{first_appearance}</small>
+              </p>
             </div>
-            <div className="col-8">
-              <div className="card-body">
-                <h5 className="card-title">{superhero}</h5>
-                <p className="card-text">{alter_ego}</p>
-                {alter_ego !== characters && (
-                  <p className="card-text">{characters}</p>
-                )}
-                <p className="card-text">
-                  <small className="text-muted">{first_appearance}</small>
-                </p>
-              </div>
 
-              <div className="readmore">
-                <Link
-                  className="btn btn-primary ms-3 mb-3"
-                  to={`/heroes/${id}`}
-                >
-                  Read more
-                </Link>
-              </div>
+            <div className="readmore">
+              <Link className="btn btn-primary ms-3 mb-3" to={`/heroes/${id}`}>
+                Read more
+              </Link>
             </div>
           </div>
         </div>
-      
+      </Link>
     </div>
   );
 };
@@ -85,5 +80,9 @@ export const HeroeCard = ({
         </div>
       </div>
     </div>
+
+
+
+
 
     */
