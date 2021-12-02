@@ -15,7 +15,8 @@ export const HeroeCard = ({
   characters,
 }) => {
   return (
-    <div className="col animate__animated animate__pulse">
+
+    <div className="col animate__animated animate__pulse" style={{transform: `scale(1.1)`}}>
       <Link className="card mb-3 text-decoration-none text-dark" to={`/heroes/${id}`}>
         <div className="row g-0 ">
          

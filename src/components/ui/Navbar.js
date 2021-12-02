@@ -11,6 +11,8 @@ import { types } from "../../types/types";
 import mainLogo from "../../assets/images/mainLogo.png";
 
 export const Navbar = () => {
+
+
   const { user, dispatch } = useContext(AuthContext);
 
   const [click, setClick] = useState(false);
@@ -39,8 +41,10 @@ export const Navbar = () => {
     navigate("/login", { replace: true });
   };
 
+ 
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark ">
+
       <Link className="navbar-brand" to="/">
         <img
           className="navbar-logo d-inline-block align-top ms-3"
